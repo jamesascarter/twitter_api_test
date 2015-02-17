@@ -12,11 +12,16 @@ GEM
     json (1.8.1)
     memoizable (0.4.2)
       thread_safe (~> 0.3, >= 0.3.1)
+    mime-types (2.4.3)
     multipart-post (2.0.0)
     naught (1.0.0)
+    netrc (0.10.2)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
+    rest-client (1.7.2)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
     simple_oauth (0.3.1)
     sinatra (1.4.5)
       rack (~> 1.4)
@@ -37,6 +42,8 @@ GEM
       memoizable (~> 0.4.0)
       naught (~> 1.0)
       simple_oauth (~> 0.3.0)
+    what3words (1.0.0)
+      rest-client
 
 PLATFORMS
   ruby
@@ -46,3 +53,4 @@ DEPENDENCIES
   sinatra
   sinatra-partial
   twitter
+  what3words

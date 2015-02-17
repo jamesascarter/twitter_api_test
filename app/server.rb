@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'sinatra/base'
 require './app/models/tweets'
-require './env_variables'
+require './app/models/whatwords'
 # require 'twitter'
 
 
@@ -12,6 +12,7 @@ set :partial_template_engine, :erb
 get '/' do
   twit = Twit.new
   @tweets = twit.getUserInfo
-  # @followers = twit.showFollowers
+  @followers = twit.showFollowers
+  @whats = whats
   erb :index
 end

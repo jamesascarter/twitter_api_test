@@ -23,7 +23,7 @@ class Twit
     end
 
     def showFollowers
-        client.followers.each { |item| puts item.screen_name }
+        return followers = client.followers.map { |item| item.screen_name}
     end
 
     def showAllTweets
