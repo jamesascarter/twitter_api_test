@@ -5,4 +5,8 @@
 <p>
 <%= @followers %>
 </p>
-<%= @whats %>
+<ul class= 'tweets'>
+  <% @single_follower.each do |tweet|%>
+    <li> <%= tweet.text.to_s %> </li>
+  <% end %>
+</ul>>

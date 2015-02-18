@@ -27,7 +27,7 @@ class Twit
     end
 
     def showAllTweets
-        client.user_timeline.each {|item| puts item.text}
+        client.user_timeline.map {|item| item.text}
     end
 
     def showAllUserTweets(userScreenName)
@@ -36,5 +36,9 @@ class Twit
 
     def sendTweet(content)
         client.update(content)
+    end
+
+    def folowers
+        client.followers("this_william")
     end
 end
